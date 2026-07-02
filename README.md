@@ -1,14 +1,6 @@
-# TinyServer — Linux 高性能 HTTP 服务器
+# TinyServer
 
-[![C++](https://img.shields.io/badge/C%2B%2B-14-blue)](https://isocpp.org/)
-[![Linux](https://img.shields.io/badge/Linux-Ubuntu%2024.04-orange)](https://ubuntu.com/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-
-从零构建的 C++ HTTP/1.1 Web 服务器，~800 行代码，仅使用 POSIX/Linux 系统级 API（MySQL C API 除外），零框架依赖。
-
-## 为什么写这个项目
-
-现代 Web 开发中，开发者大量使用框架（Spring、Express、Django），底层协议细节被层层封装。这个项目的目的是 **深入理解 HTTP 服务器的工作原理**——从 TCP 字节流到 HTTP 响应，全部手写。
+C++ HTTP/1.1 Web 服务器，基于 Linux epoll + 线程池 + 非阻塞 I/O，使用 POSIX/Linux 系统级 API。
 
 ## 核心特性
 
@@ -213,7 +205,3 @@ if (duration_cast<milliseconds>(now - last_tick_).count() >= 500) {
 | 数据库 | RAII 设计模式, POSIX 信号量 sem_t, 连接池设计, MySQL C API, wrk 压测 |
 
 详见 **[NOTES.md](NOTES.md)**。
-
-## License
-
-MIT
