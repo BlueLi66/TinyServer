@@ -8,3 +8,5 @@ server.log
 # IDE
 .vscode/
 .idea/
+CLAUDE.md
+epoll_server
